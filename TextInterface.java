@@ -52,14 +52,14 @@ public class TextInterface {
                 case 1:
                     
                     System.out.println("Viewing Your Medicine Cabinet");
-                    if(home.size() !=0){System.out.println("You are currently taking " + home.medNames());}
+                    if(home.size() !=0){System.out.println("You are have " + home.medNames() + " in your Medicine Cabinet.");}
                     else{System.out.println("None Yet!");}                                   
                     returnMenu(scanner);
                     break;
                 case 2:
                     
                     System.out.println("Viewing Meds You're Actively Taking");
-                    if(home.sizeActive() !=0){ System.out.println(home.medActiveNames());}
+                    if(home.sizeActive() !=0){System.out.println(home.medActiveNames());}
                     else{System.out.println("None Yet!");}
                     returnMenu(scanner);
                     break;
