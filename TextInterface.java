@@ -135,7 +135,7 @@ public class TextInterface {
                     
                     returnMenu(scanner);
                     break;
-                case 7: //Isn't Working Correctly
+                case 7: 
                     System.out.println("Mark Medication as Active:");
                     System.out.println("");
                     
@@ -148,7 +148,12 @@ public class TextInterface {
                     }
                     else
                     {
-                        System.out.println("None Yet");
+			System.out.println("No  Current Active Meds Yet");
+			System.out.print("Insert Name of Medicaton to Add to Active List:  ");
+                        String nameTemp2 = scanner.nextLine();
+                        while(nameTemp2.isEmpty()){nameTemp2 = scanner.nextLine();}
+                        home.setActive(nameTemp2);
+                        
                     }            
                     returnMenu(scanner);
                     break;
